@@ -36,7 +36,7 @@ const Gptsearchbar = () => {
   };
 
   return (
-    <div className="flex items-center justify-center w-full px-4 absolute top-20">
+    <div className="flex items-center justify-center w-full px-4 relative">
       <form onSubmit={(e) => e.preventDefault()} className="w-full max-w-xl">
         <div className="flex items-center bg-white rounded-lg shadow-lg overflow-hidden">
           <input
@@ -46,7 +46,7 @@ const Gptsearchbar = () => {
             placeholder={languages[language].placeholder}
           />
           <button
-            className="bg-red-600 text-white px-6 py-3 font-semibold hover:bg-red-700 transition-all"
+            className="bg-red-600 text-white px-4 py-2 md:px-6 md:py-3 font-semibold hover:bg-red-700 transition-all"
             onClick={handleGptSearch}
           >
             {languages[language].search}

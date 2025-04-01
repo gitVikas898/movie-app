@@ -10,7 +10,7 @@ const Gptsearch = () => {
       style={{ backgroundImage: `url(${BACKGROUND_URL})` }}
     >
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-50 z-[-1]"></div>
 
       {/* Content Container */}
       <div className="relative w-full flex flex-col items-center px-4">
