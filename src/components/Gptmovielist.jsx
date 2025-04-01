@@ -17,13 +17,15 @@ const Gptmovielist = ({ movies }) => {
 
   return (
     <div className="relative bg-black bg-opacity-85 rounded-lg p-6">
-      {/* Left Scroll Button */}
+      {/* Left Scroll Button (only if movies exist) */}
+      {movies.length > 3 && (
       <button
         onClick={scrollLeft}
         className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-black bg-opacity-60 rounded-full hover:bg-opacity-90 transition"
       >
         <ChevronLeft size={30} className="text-white" />
       </button>
+      )}
 
       {/* Movie List - Carousel */}
       <div
@@ -43,13 +45,15 @@ const Gptmovielist = ({ movies }) => {
         ))}
       </div>
 
-      {/* Right Scroll Button */}
+      {/* Right Scroll Button (only if movies exist) */}
+      {movies.length > 3 && (
       <button
         onClick={scrollRight}
         className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-black bg-opacity-60 rounded-full hover:bg-opacity-90 transition"
       >
         <ChevronRight size={30} className="text-white" />
       </button>
+      )}
     </div>
   );
 };

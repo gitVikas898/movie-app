@@ -10,9 +10,8 @@ const Gptsuggestions = () => {
 
   // Extract the first search result for each recommended movie
   const myMovies = gptMovieResults
-    .slice(1) // Skipping index 0
     .map((movie) => movie?.results?.[0])
-    .filter((movie) => movie); // Removing undefined/null values
+    .filter(Boolean); // Removing undefined/null values
 
   return (
     <div className="p-6 sm:p-8 md:p-12 flex flex-col items-center">
